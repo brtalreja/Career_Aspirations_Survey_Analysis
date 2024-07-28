@@ -36,11 +36,9 @@ gender = data["Your Gender"].value_counts()
 label = gender.index
 counts = gender.values
 
-colors = ['gold', 'lightgreen']
-
 fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
 fig.update_layout(title_text = 'Demographics: Gender')
-fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size=30,
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
                   marker = dict(colors=colors, line=dict(color = 'black', width = 3)))
 fig.show()
 
@@ -55,8 +53,8 @@ counts = question1.values
 
 fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
 fig.update_layout(title_text = 'Q1: Factors Influencing Career Aspirations')
-fig.update_traces(hoverinfo = 'label+value', textinfo = 'Percent', textfont_size = 30,
-                  marker = dict(color = colors, line = dict(color = 'black', width = 3)))
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
 
 fig.show()
 
