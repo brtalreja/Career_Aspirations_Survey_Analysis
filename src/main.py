@@ -58,4 +58,26 @@ fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size
 
 fig.show()
 
-#COMMENT: 
+#COMMENT: Parents and Social idols play an important part in shaping an individual's career aspirations.
+# Approximately 58% of the respondents choose what their parents want them to pursue or what their social idols do.
+# Remaining 42% of GenZ are influenced by successful influencers, social media like LinkedIn, and known associations.
+
+#Q2: Interest in Higher Education:
+
+question2 = 'Would you definitely pursue a Higher Education / Post Graduation outside of India ? If only you have to self sponsor it.'
+question2 = data[question2].value_counts()
+
+label = question2.index
+counts = question2.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q2: Interest in Higher Education (self sponsorship)')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: Approximately 47% of the GenZ are interested in pursuing a higher education with their self-earned income.
+# 27.7% said no to pursuing higher education outside India.
+# While the remaining respondents said a conditional yes, i.e. they would not pursue it with their own expenses but if they get some scholarship or financial assistance, they will do it.
+
