@@ -100,4 +100,41 @@ fig.show()
 # 33.6% are willing to do it without any hesitations.
 # Finally, 7.2% will not do it under any circumstances.
 
-#Q4: 
+#Q4: Willing to work for an employer without clearly defined mission:
+
+question4 = 'Would you work for a company whose mission is not clearly defined and publicly posted.'
+question4 = data[question4].value_counts()
+
+label = question4.index
+counts = question4.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q4: Willing to work for an employer without clearly defined mission')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: Majority of respondents feel the mission of a company is important and should be properly defined.
+# So, if it is not clearly defined, 66.8% will not work for an employer whose mission is not clearly defined or publicly posted.
+# And 33.2% would be open to work for such an employer.
+
+#Q5: Willing to work for an employer whose mission misaligns wrt their public actions:
+
+question5 = 'How likely would you work for a company whose mission is misaligned with their public actions or even their product ?'
+question5 = data[question5].value_counts()
+
+label = question5.index
+counts = question5.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q5: Willing to work for an employer whose mission misaligns wrt their public actions')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: A similar trend like the last question can be seen for this question as well.
+# Majority of respondents feel the mission of a company is important and should be properly defined which aligns with their public actions.
+# So, if it is misaligned, 67.2% will not work for an employer and 32.8% would be open to work for such an employer.
+
