@@ -197,3 +197,22 @@ fig.show()
 # 31.9% prefer a learning and enabling environment. 15.3% prefer a rewarding and enabling environment.
 # 2.98% prefer a challenging environment but doesn't have a learning and rewarding component.
 # 1.7% prefer learning but are open to an environment which does not enable a learning environment.
+
+#Q9: Preferred type of learning environment:
+
+question9 = 'Which type of learning environment that you are most likely to work in ?'
+question9 = data[question9].value_counts()
+
+label = question9.index
+counts = question9.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q9: Preferred type of learning environment')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: 51.09% prefer a self-paced learning option with different choices of either learning by observing others or trial and error with hands-on experience.
+# 36.5% prefer a instructor or expert learning programs with a hands-on trial and error experience.
+# Finally, 12.3% choose to learn by observing others, and get hands-on practice with trial and error.
