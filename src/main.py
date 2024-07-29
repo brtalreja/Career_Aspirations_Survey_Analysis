@@ -178,4 +178,22 @@ fig.show()
 # 48.6% wish to work in a hybrid environment where they don't have to visit office everyday.
 # 21.3% prefer to work from office everyday.
 
-#Q8: 
+#Q8: Preferred Values in Employers:
+
+question8 = 'Which of the below Employers would you work with.'
+question8 = data[question8].value_counts()
+
+label = question8.index
+counts = question8.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q8: Preferred Values in Employers')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: 48.1% prefer a challenging and learning environment, which rewards the efforts of employees.
+# 31.9% prefer a learning and enabling environment. 15.3% prefer a rewarding and enabling environment.
+# 2.98% prefer a challenging environment but doesn't have a learning and rewarding component.
+# 1.7% prefer learning but are open to an environment which does not enable a learning environment.
