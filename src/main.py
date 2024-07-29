@@ -138,3 +138,22 @@ fig.show()
 # Majority of respondents feel the mission of a company is important and should be properly defined which aligns with their public actions.
 # So, if it is misaligned, 67.2% will not work for an employer and 32.8% would be open to work for such an employer.
 
+#Q6: Willing to work for an employer whose mission is not bringing social impact:
+
+question6 = 'How likely would you work for a company whose mission is not bringing social impact ?'
+data['question6_cat'] = data[question6].map(lambda x: '9-10 Most Likely' if x >= 9 else ('7-8 Maybe' if x >= 7 else '1-6 Least Likely'))
+question6 = data['question6_cat'].value_counts()
+
+label = question6.index
+counts = question6.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q6: Willing to work for an employer whose mission is not bringing social impact')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: A similar trend like the last question can be seen for this question as well.
+# Majority of respondents feel the mission of a company is important and should be properly defined which aligns with their public actions.
+# So, if it is misaligned, 67.2% will not work for an employer and 32.8% would be open to work for such an employer.
