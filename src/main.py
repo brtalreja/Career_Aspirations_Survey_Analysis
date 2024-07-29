@@ -154,6 +154,28 @@ fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size
 
 fig.show()
 
-#COMMENT: A similar trend like the last question can be seen for this question as well.
-# Majority of respondents feel the mission of a company is important and should be properly defined which aligns with their public actions.
-# So, if it is misaligned, 67.2% will not work for an employer and 32.8% would be open to work for such an employer.
+#COMMENT: A similar trend like the last two question can be seen for this question as well.
+# Majority of respondents feel the mission of a company is important and should bring an impact to society.
+# So, if it is misaligned, 65.2% will be least likely to work for such an employer, 27.7% might consider working for them, and 7.23% would be open to work for such an employer.
+
+#Q7: Most Preferred Work Environment:
+
+question7 = 'What is the most preferred working environment for you.'
+question7 = data[question7].value_counts()
+
+label = question7.index
+counts = question7.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q7: Most Preferred Work Environment')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: 4.68% respondents choose that they want to work fully remotely with never visiting office.
+# Another 25.5% also wish for a fully remote option but are open to visiting when needed.
+# 48.6% wish to work in a hybrid environment where they don't have to visit office everyday.
+# 21.3% prefer to work from office everyday.
+
+#Q8: 
