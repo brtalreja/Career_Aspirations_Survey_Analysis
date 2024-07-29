@@ -216,3 +216,28 @@ fig.show()
 #COMMENT: 51.09% prefer a self-paced learning option with different choices of either learning by observing others or trial and error with hands-on experience.
 # 36.5% prefer a instructor or expert learning programs with a hands-on trial and error experience.
 # Finally, 12.3% choose to learn by observing others, and get hands-on practice with trial and error.
+
+#Q10: Career Aspirations:
+
+question10 = 'Which of the below careers looks close to your Aspirational job ?'
+data_question10_expanded = data[question10].str.split(', ', expand = True).stack().reset_index(level = 1, drop = True)
+data_question10_expanded.name = 'Aspirations'
+
+aspirations_counts = data_question10_expanded.value_counts()
+
+label = aspirations_counts.index
+counts = aspirations_counts.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q10: Career Aspirations')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: The career aspirations are very fairly distributed in all the options. The top 4 options are:
+# Design and creative jobs
+# Data and generate insight jobs
+# Business operations jobs
+# Manage end-to-end projects jobs
+
