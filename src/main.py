@@ -241,3 +241,21 @@ fig.show()
 # Business operations jobs
 # Manage end-to-end projects jobs
 
+#Q11: Preferred Values in a Manager:
+
+question11 = 'What type of Manager would you work without looking into your watch ?'
+question11 = data[question11].value_counts()
+
+label = question11.index
+counts = question11.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q11: Preferred Values in a Manager')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: Most GenZ understand the importance of a leader and with that understanding, 54.9% expect a manager to explain, set a goal, and help achieve that goal.
+# Only 1.3% people said that they can work with a manager who sets unrealistic expectations.
+# Rest 43.7% expect their manager to either help them in setting and completing the goal.
