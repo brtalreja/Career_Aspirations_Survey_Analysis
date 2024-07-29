@@ -259,3 +259,24 @@ fig.show()
 #COMMENT: Most GenZ understand the importance of a leader and with that understanding, 54.9% expect a manager to explain, set a goal, and help achieve that goal.
 # Only 1.3% people said that they can work with a manager who sets unrealistic expectations.
 # Rest 43.7% expect their manager to either help them in setting and completing the goal.
+
+#Q12: Preferred Setup at Work:
+
+question12 = 'Which of the following setup you would like to work ?'
+data_question12_expanded = data[question12].str.split(', ', expand = True).stack().reset_index(level = 1, drop = True)
+data_question12_expanded.name = 'Setup'
+
+set_up_counts = data_question12_expanded.value_counts()
+
+label = set_up_counts.index
+counts = set_up_counts.values
+
+fig = go.Figure(data=[go.Pie(labels = label, values = counts)])
+fig.update_layout(title_text = 'Q12: Preferred Setup at Work')
+fig.update_traces(hoverinfo = 'label+value', textinfo = 'percent', textfont_size = 30,
+                  marker = dict(colors = colors, line = dict(color = 'black', width = 3)))
+
+fig.show()
+
+#COMMENT: 30.8% and 30.5% respondents prefer to work with 5-6 and 2-3 people respectively.
+# While 84.6% prefer to work with people, 15.4% people prefer to work alone.
