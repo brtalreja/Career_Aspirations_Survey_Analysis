@@ -16,3 +16,5 @@ This project focuses on analyzing a survey dataset on the career aspirations of 
 ## Exploratory Data Analysis (EDA) performed:
 
 ### Demographics Analysis:
+
+![Current Country](output/Current_Country.png)
