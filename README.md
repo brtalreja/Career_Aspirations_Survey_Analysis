@@ -83,3 +83,13 @@ This project focuses on analyzing a survey dataset on the career aspirations of 
 - To analyze what are the preferred work setups for the respondents.
 
 ![Preferred Setup at Work](output/preferred_setup_at_work.png)
+
+## Conclusion
+
+This project builds on the foundational work provided in The Clever Programmer's Career Aspirations Survey Analysis using Python by expanding the analysis to provide deeper insights into various other aspects of the survey analysis.
+
+## References:
+1. [Market Research](https://en.wikipedia.org/wiki/Market_research)
+2. [How to do Market Research](https://www.investopedia.com/terms/m/market-research.asp)
+3. [Project Reference](https://thecleverprogrammer.com/2023/01/09/career-aspirations-survey-analysis-using-python/)
+4. [Dataset](https://www.kaggle.com/datasets/kulturehire/understanding-career-aspirations-of-genz)
