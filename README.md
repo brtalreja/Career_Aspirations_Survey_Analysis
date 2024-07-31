@@ -6,15 +6,80 @@ This project focuses on analyzing a survey dataset on the career aspirations of 
 
 ## Data Preparation
 
-### Reading and Preprocessing Data:
+### Reading and Preprocessing the data:
 - Load the survey data from a CSV file.
 - Generate descriptive statistics for the dataset.
-
-### Key Statistics:
-- Print and review key statistics of the dataset.
 
 ## Exploratory Data Analysis (EDA) performed:
 
 ### Demographics Analysis:
+- To check how diverse is the dataset.
 
 ![Current Country](output/Current_Country.png)
+
+#### Gender:
+- To visualize the gender distribution of respondents.
+
+![Gender](output/gender.png)
+
+### Career Aspirations and Preferences:
+
+#### Factors Influencing Career Aspirations:
+- To analyze the factors influencing career aspirations of the respondents.
+
+![Factors Influencing Career Aspirations](output/factors_influencing_career_aspirations.png)
+
+#### Interest in Self-Sponsored Higher Education:
+- To analyze if respondents are interested in pursuing higher education outside of India with self-sponsorship.
+
+![Interest in Higher Education](output/interest_in_higher_education.png)
+
+#### Willingness to Work for One Employer for 3+ Years:
+- To analyze the likelihood of respondents working for a single employer for 3 years or more.
+
+![Work for One Employer](output/work_for_one_employer.png)
+
+#### Willingness to Work for an Employer Without a Clearly Defined Mission:
+- To analyze the willingness of respondents to work for an employer without a clearly defined mission.
+
+![Employer Without Mission](output/employer_without_mission.png)
+
+#### Willingness to Work for an Employer Whose Mission Misaligns with Public Actions:
+- To analyze the willingness of respondents to work for an employer whose mission misaligns with their public actions.
+
+![Mission Misalignment](output/mission_misalignment.png)
+
+#### Willingness to Work for an Employer Whose Mission Does Not Bring Social Impact:
+- To analyze the willingness of respondents to work for an employer whose mission does not bring social impact.
+
+![No Social Impact](output/no_social_impact.png)
+
+#### Most Preferred Work Environment:
+- To analyze what is a preferred work environment for the respondents.
+
+![Preferred Work Environment](output/preferred_work_environment.png)
+
+#### Preferred Values in Employers:
+- To analyze what values are preferred by the respondents in employers.
+
+![Preferred Values in Employers](output/preferred_values_in_employers.png)
+
+#### Preferred Type of Learning Environment:
+- To analyze what are the types of learning environments that respondents prefer.
+
+![Preferred Learning Environment](output/preferred_learning_environment.png)
+
+#### Career Aspirations:
+- To analyze career aspirations of the respondents.
+
+![Career Aspirations](output/career_aspirations.png)
+
+#### Preferred Values in a Manager:
+- To analyze what values respondents prefer in their manager.
+
+![Preferred Values in a Manager](output/preferred_values_in_manager.png)
+
+#### Preferred Setup at Work:
+- To analyze what are the preferred work setups for the respondents.
+
+![Preferred Setup at Work](output/preferred_setup_at_work.png)
